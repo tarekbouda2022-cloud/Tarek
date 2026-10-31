@@ -2,82 +2,198 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الشخصي</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقعي الشخصي</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            text-align: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: #17243a;
-            padding: 25px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
-        h1 {
-            color: #38bdf8;
-        }
+header {
+    background: #172554;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
 
-        .container {
-            padding: 50px 20px;
-        }
+nav {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            margin: auto;
-        }
+.logo {
+    color: #38bdf8;
+    font-size: 24px;
+    font-weight: bold;
+}
 
-        button {
-            background: #0284c7;
-            color: white;
-            border: none;
-            padding: 14px 25px;
-            border-radius: 8px;
-            font-size: 17px;
-            cursor: pointer;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
 
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #17243a;
-        }
-    </style>
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #172554, #0f172a);
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: 15px auto;
+    border: 1px solid #334155;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #1e3a5f;
+    padding: 13px 22px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #172554;
+    text-align: center;
+    padding: 25px;
+    color: #cbd5e1;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>مرحبا بك في موقعي</h1>
-        <p>هذا هو أول موقع إلكتروني خاص بي</p>
-    </header>
-
-    <div class="container">
-        <div class="card">
-            <h2>من أنا؟</h2>
-            <p>أهلا وسهلا بك في موقعي الشخصي.</p>
-
-            <h2>ماذا أقدم؟</h2>
-            <p>أعمل على تطوير مشاريعي وأفكاري عبر الإنترنت.</p>
-
-            <button onclick="alert('شكرا لزيارتك موقعي!')">
-                اضغط هنا
-            </button>
-        </div>
+<header>
+<nav>
+    <div class="logo">موقعي</div>
+    <div>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من أنا</a>
+        <a href="#skills">مهاراتي</a>
+        <a href="#projects">مشاريعي</a>
+        <a href="#contact">تواصل</a>
     </div>
+</nav>
+</header>
 
-    <footer>
-        جميع الحقوق محفوظة © 2026
-    </footer>
+<div class="hero" id="home">
+    <h1>مرحباً بك في موقعي الشخصي</h1>
+    <p>أهلاً وسهلاً بك، هنا أشارك أفكاري ومشاريعي وأعمالي.</p>
+    <a class="btn" href="#about">اكتشف المزيد</a>
+</div>
+
+<section id="about">
+    <h2>من أنا؟</h2>
+    <div class="card">
+        <p>
+            أنا صاحب هذا الموقع، مهتم بالتكنولوجيا
+            والبرمجة وتطوير المواقع الإلكترونية.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>مهاراتي واهتماماتي</h2>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Programming</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>مشاريعي</h2>
+    <div class="card">
+        <h3>المشروع الأول</h3>
+        <p>هذا أول مشروع أنجزته باستخدام GitHub.</p>
+    </div>
+    <div class="card">
+        <h3>مشروع جديد</h3>
+        <p>قريباً سأضيف المزيد من مشاريعي هنا.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>تواصل معي</h2>
+    <div class="card">
+        <p>شكراً لزيارتك موقعي الشخصي.</p>
+        <p>يمكنك التواصل معي بعد إضافة معلومات الاتصال الخاصة بي.</p>
+    </div>
+</section>
+
+<footer>
+    جميع الحقوق محفوظة © 2026
+</footer>
 
 </body>
 </html>
+
